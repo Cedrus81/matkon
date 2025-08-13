@@ -4,7 +4,8 @@ import data from '../data.json';
 import { StyleSheet, Image } from 'react-native';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
+import Accordion from '../cmps/Accordion';
+import { formatIngredients } from '../services/utils';
 
 // Update your component's return statement:
 const RecipePage = () => {
@@ -31,11 +32,13 @@ const RecipePage = () => {
                     </Text>
                 </View>
                 <Image
-                    source={require('../assets/images/recipe_image_1.jpg')}
+                    source={{ uri: recipe.image }}
                     style={styles.image}
-                    resizeMode="cover"
+                    resizeMode='cover'
                 />
             </View>
+            <Accordion list={formatIngredients(recipe.ingredients)} listTitle="Ingredients" />
+            <Accordion list={recipe.steps} listTitle="Instructions" />
         </SafeAreaView>
     );
 };
