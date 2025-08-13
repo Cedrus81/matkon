@@ -5,6 +5,7 @@ export const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
     const mode = useColorScheme() ?? 'light';                    // e.g. 'light' or 'dark'
+
     return (
         <ThemeContext.Provider value={{ mode, themeColors }}>
             {children}
