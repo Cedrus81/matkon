@@ -1,0 +1,275 @@
+[
+    {
+        "id": 1,
+        "title": "Classic Spaghetti Bolognese",
+        "description": "A traditional Italian pasta dish with rich meat sauce.",
+        "ingredients": [
+            {
+                "name": "Spaghetti",
+                "quantity": "400g"
+            },
+            {
+                "name": "Ground beef",
+                "quantity": "500g"
+            },
+            {
+                "name": "Onion",
+                "quantity": "1, chopped"
+            },
+            {
+                "name": "Garlic cloves",
+                "quantity": "2, minced"
+            },
+            {
+                "name": "Carrot",
+                "quantity": "1, diced"
+            },
+            {
+                "name": "Celery stalk",
+                "quantity": "1, diced"
+            },
+            {
+                "name": "Tomato paste",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "Canned tomatoes",
+                "quantity": "400g"
+            },
+            {
+                "name": "Olive oil",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "Salt",
+                "quantity": "to taste"
+            },
+            {
+                "name": "Black pepper",
+                "quantity": "to taste"
+            },
+            {
+                "name": "Fresh basil",
+                "quantity": "a handful, chopped"
+            }
+        ],
+        "steps": [
+            "Heat olive oil in a large pan over medium heat.",
+            "Add onion, garlic, carrot, and celery. Sauté until softened.",
+            "Add ground beef and cook until browned.",
+            "Stir in tomato paste and canned tomatoes.",
+            "Season with salt and pepper.",
+            "Simmer for 30 minutes, stirring occasionally.",
+            "Cook spaghetti according to package instructions.",
+            "Serve sauce over spaghetti and garnish with fresh basil."
+        ],
+        "prepTime": "15 min",
+        "cookTime": "45 min",
+        "servings": 4,
+        "tags": [
+            "Italian",
+            "Pasta",
+            "Main Course"
+        ],
+        "image": "https://example.com/images/spaghetti-bolognese.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Vegetarian Chili",
+        "description": "A hearty and spicy chili packed with beans and vegetables.",
+        "ingredients": [
+            {
+                "name": "Kidney beans",
+                "quantity": "400g, drained"
+            },
+            {
+                "name": "Black beans",
+                "quantity": "400g, drained"
+            },
+            {
+                "name": "Corn kernels",
+                "quantity": "1 cup"
+            },
+            {
+                "name": "Red bell pepper",
+                "quantity": "1, diced"
+            },
+            {
+                "name": "Green bell pepper",
+                "quantity": "1, diced"
+            },
+            {
+                "name": "Onion",
+                "quantity": "1, chopped"
+            },
+            {
+                "name": "Garlic cloves",
+                "quantity": "3, minced"
+            },
+            {
+                "name": "Tomato sauce",
+                "quantity": "500ml"
+            },
+            {
+                "name": "Chili powder",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "Cumin",
+                "quantity": "1 tsp"
+            },
+            {
+                "name": "Paprika",
+                "quantity": "1 tsp"
+            },
+            {
+                "name": "Olive oil",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "Salt",
+                "quantity": "to taste"
+            },
+            {
+                "name": "Black pepper",
+                "quantity": "to taste"
+            }
+        ],
+        "steps": [
+            "Heat olive oil in a large pot over medium heat.",
+            "Add onion and garlic, sauté until fragrant.",
+            "Add bell peppers and cook for 5 minutes.",
+            "Stir in beans, corn, tomato sauce, and spices.",
+            "Season with salt and pepper.",
+            "Simmer for 25 minutes, stirring occasionally.",
+            "Serve hot, optionally with rice or bread."
+        ],
+        "prepTime": "10 min",
+        "cookTime": "35 min",
+        "servings": 6,
+        "tags": [
+            "Vegetarian",
+            "Gluten-Free",
+            "Main Course"
+        ],
+        "image": "https://example.com/images/vegetarian-chili.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Chocolate Chip Cookies",
+        "description": "Crispy on the edges, chewy in the center, loaded with chocolate chips.",
+        "ingredients": [
+            {
+                "name": "All-purpose flour",
+                "quantity": "2 1/4 cups"
+            },
+            {
+                "name": "Baking soda",
+                "quantity": "1 tsp"
+            },
+            {
+                "name": "Salt",
+                "quantity": "1/2 tsp"
+            },
+            {
+                "name": "Unsalted butter",
+                "quantity": "1 cup, softened"
+            },
+            {
+                "name": "Brown sugar",
+                "quantity": "1 cup"
+            },
+            {
+                "name": "White sugar",
+                "quantity": "1/2 cup"
+            },
+            {
+                "name": "Eggs",
+                "quantity": "2"
+            },
+            {
+                "name": "Vanilla extract",
+                "quantity": "2 tsp"
+            },
+            {
+                "name": "Chocolate chips",
+                "quantity": "2 cups"
+            }
+        ],
+        "steps": [
+            "Preheat oven to 180°C (350°F).",
+            "Mix flour, baking soda, and salt in a bowl.",
+            "In another bowl, cream butter and sugars until fluffy.",
+            "Beat in eggs and vanilla.",
+            "Gradually add dry ingredients to wet ingredients.",
+            "Stir in chocolate chips.",
+            "Drop spoonfuls onto baking sheet.",
+            "Bake for 10-12 minutes until golden brown."
+        ],
+        "prepTime": "15 min",
+        "cookTime": "12 min",
+        "servings": 24,
+        "tags": [
+            "Dessert",
+            "Cookies",
+            "Vegetarian"
+        ],
+        "image": "https://example.com/images/chocolate-chip-cookies.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Grilled Lemon Herb Chicken",
+        "description": "Juicy grilled chicken breasts marinated in lemon and herbs.",
+        "ingredients": [
+            {
+                "name": "Chicken breasts",
+                "quantity": "4"
+            },
+            {
+                "name": "Lemon juice",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "Olive oil",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "Garlic cloves",
+                "quantity": "2, minced"
+            },
+            {
+                "name": "Dried oregano",
+                "quantity": "1 tsp"
+            },
+            {
+                "name": "Dried thyme",
+                "quantity": "1 tsp"
+            },
+            {
+                "name": "Salt",
+                "quantity": "to taste"
+            },
+            {
+                "name": "Black pepper",
+                "quantity": "to taste"
+            }
+        ],
+        "steps": [
+            "Mix lemon juice, olive oil, garlic, oregano, thyme, salt, and pepper in a bowl.",
+            "Marinate chicken breasts in the mixture for at least 30 minutes.",
+            "Preheat grill to medium-high heat.",
+            "Grill chicken for 6-7 minutes per side until cooked through.",
+            "Serve hot with your favorite sides."
+        ],
+        "prepTime": "10 min",
+        "cookTime": "15 min",
+        "servings": 4,
+        "tags": [
+            "Chicken",
+            "Grilled",
+            "Main Course",
+            "Gluten-Free"
+        ],
+        "image": "https://example.com/images/grilled-lemon-herb-chicken.jpg"
+    }
+]
