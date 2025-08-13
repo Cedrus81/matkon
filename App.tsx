@@ -1,23 +1,27 @@
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import RecipeGallery from './src/screens/RecipeGallery';
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+import { ThemeProvider } from './src/contexts/ThemeContext';
+import RecipePage from './src/screens/RecipePage';
 
+function App() {
+  const colorScheme = useColorScheme() ?? 'light';
   return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
+    <ThemeProvider>
+      <SafeAreaProvider>
+        <StatusBar
+          barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
+        />
+        <AppContent />
+      </SafeAreaProvider>
+    </ThemeProvider>
   );
 }
-
 function AppContent() {
   // const safeAreaInsets = useSafeAreaInsets();
 
   return (
     <View style={styles.container}>
-      <RecipeGallery />
+      <RecipePage />
     </View>
   );
 }
