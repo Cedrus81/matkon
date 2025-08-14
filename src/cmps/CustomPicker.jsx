@@ -87,7 +87,7 @@ const CustomPicker = ({
 
 const styles = StyleSheet.create({
     wrapper: {
-        marginBottom: 12,
+        // marginBottom: 12,
     },
     label: {
         fontSize: 14,

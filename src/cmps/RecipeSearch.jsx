@@ -96,48 +96,46 @@ const RecipeSearch = ({
                         {/* Tag Filter */}
 
                         <View style={[styles.inputGroup]}>
-                            <Text style={[styles.label, { color: themeColors[mode].text }]}>
+                            {/* <Text style={[styles.label, { color: themeColors[mode].text }]}>
                                 Filter by Tag
                             </Text>
                             <View style={[
-                                styles.pickerContainer,
+                                ,
                                 {
                                     borderColor: themeColors[mode].border,
                                     backgroundColor: themeColors[mode].background,
                                 }
-                            ]}>
-                                <CustomPicker
-                                    selectedValue={selectedTag}
-                                    onValueChange={handleTagFilter}
-                                    options={[{ label: 'All Tags', value: 'all' }, ...availableTags.map(tag => ({ label: tag, value: tag }))]}
-                                    label="Filter by Tag"
-                                    style={styles.pickerContainer}
-                                    itemStyle={{ color: themeColors[mode].text }}
-                                />
-                            </View>
+                            ]}> */}
+                            <CustomPicker
+                                selectedValue={selectedTag}
+                                onValueChange={handleTagFilter}
+                                options={[{ label: 'All Tags', value: 'all' }, ...availableTags.map(tag => ({ label: tag, value: tag }))]}
+                                label="Filter by Tag"
+                                itemStyle={{ color: themeColors[mode].text }}
+                            />
+                            {/* </View> */}
                         </View>
 
                         {/* Sort Options */}
                         <View style={[styles.inputGroup]}>
-                            <Text style={[styles.label, { color: themeColors[mode].text }]}>
+                            {/* <Text style={[styles.label, { color: themeColors[mode].text }]}>
                                 Sort By
-                            </Text>
-                            <View style={[
-                                styles.pickerContainer,
+                            </Text> */}
+                            {/* <View style={[
+                                ,
                                 {
                                     borderColor: themeColors[mode].border,
                                     backgroundColor: themeColors[mode].background,
                                 }
-                            ]}>
-                                <CustomPicker
-                                    selectedValue={sortBy}
-                                    onValueChange={handleSort}
-                                    options={sortOptions}
-                                    label="Sort By"
-                                    style={styles.pickerContainer}
-                                    itemStyle={{ color: themeColors[mode].text }}
-                                />
-                            </View>
+                            ]}> */}
+                            <CustomPicker
+                                selectedValue={sortBy}
+                                onValueChange={handleSort}
+                                options={sortOptions}
+                                label="Sort By"
+                                itemStyle={{ color: themeColors[mode].text }}
+                            />
+                            {/* </View> */}
                         </View>
                     </View>
 
@@ -191,11 +189,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         fontSize: 16,
     },
-    pickerContainer: {
-        borderWidth: 1,
-        borderRadius: 8,
-        overflow: 'hidden',
-    },
+
     picker: {
         height: 50,
     },
@@ -215,7 +209,7 @@ const styles = StyleSheet.create({
     inputGroupContainer: {
         display: 'flex',
         flexDirection: 'row',
-        // gap: 10,
+        gap: 10,
     },
 });
 

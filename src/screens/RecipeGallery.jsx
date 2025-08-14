@@ -60,7 +60,6 @@ const RecipeGallery = () => {
                     navigation.navigate('Recipe')
                 }
             />
-            <Text style={{ color: themeColors[mode].text }}>Random Recipe: {recipes.length > 0 ? recipes[Math.floor(Math.random() * recipes.length)].title : 'No recipes available'}</Text>
             <RecipeList recipeList={recipes} />
         </View>
     )
