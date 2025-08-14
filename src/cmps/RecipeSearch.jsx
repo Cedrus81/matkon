@@ -7,7 +7,8 @@ import {
     StyleSheet,
     ImageBackground,
 } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+// import { Picker } from '@react-native-picker/picker';
+import CustomPicker from './CustomPicker';
 import { ThemeContext } from '../contexts/ThemeContext';
 const availableTags = ["Italian", "Pasta", "Main Course", "Vegetarian", "Gluten-Free", "Dessert",
     "Cookies", "Chicken", "Grilled"];
@@ -46,7 +47,8 @@ const RecipeSearch = ({
     ];
 
     //   onSearch / on filter to be implemented in page
-    //   Picker ?
+    console.log('rendering search');
+
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -104,16 +106,14 @@ const RecipeSearch = ({
                                     backgroundColor: themeColors[mode].background,
                                 }
                             ]}>
-                                <Picker
+                                <CustomPicker
                                     selectedValue={selectedTag}
                                     onValueChange={handleTagFilter}
-                                    style={[styles.picker, { color: themeColors[mode].text }]}
-                                >
-                                    <Picker.Item label="All Tags" value="all" />
-                                    {availableTags.map((tag, index) => (
-                                        <Picker.Item key={index} label={tag} value={tag} />
-                                    ))}
-                                </Picker>
+                                    options={[{ label: 'All Tags', value: 'all' }, ...availableTags.map(tag => ({ label: tag, value: tag }))]}
+                                    label="Filter by Tag"
+                                    style={styles.pickerContainer}
+                                    itemStyle={{ color: themeColors[mode].text }}
+                                />
                             </View>
                         </View>
 
@@ -129,15 +129,14 @@ const RecipeSearch = ({
                                     backgroundColor: themeColors[mode].background,
                                 }
                             ]}>
-                                <Picker
+                                <CustomPicker
                                     selectedValue={sortBy}
                                     onValueChange={handleSort}
-                                    style={[styles.picker, { color: themeColors[mode].text }]}
-                                >
-                                    {sortOptions.map((option, index) => (
-                                        <Picker.Item key={index} label={option.label} value={option.value} />
-                                    ))}
-                                </Picker>
+                                    options={sortOptions}
+                                    label="Sort By"
+                                    style={styles.pickerContainer}
+                                    itemStyle={{ color: themeColors[mode].text }}
+                                />
                             </View>
                         </View>
                     </View>
@@ -216,7 +215,7 @@ const styles = StyleSheet.create({
     inputGroupContainer: {
         display: 'flex',
         flexDirection: 'row',
-        gap: 10,
+        // gap: 10,
     },
 });
 

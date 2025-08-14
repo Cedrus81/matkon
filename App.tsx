@@ -18,6 +18,7 @@ Stack.config.initialRouteName;
 const Navigation = createStaticNavigation(Stack);
 
 function App() {
+  console.log('rendering app');
   const colorScheme = useColorScheme() ?? 'light';
   return (
     <ThemeProvider>
