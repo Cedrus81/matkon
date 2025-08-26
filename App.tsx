@@ -8,6 +8,9 @@ import RecipeGallery from './src/screens/RecipeGallery';
 
 const Stack = createNativeStackNavigator({
   initialRouteName: 'Home',
+  screenOptions: {
+    headerShown: false,
+  },
   screens: {
     Home: { screen: RecipeGallery },
     Recipe: { screen: RecipePage },

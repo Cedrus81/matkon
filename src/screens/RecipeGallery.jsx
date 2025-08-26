@@ -9,45 +9,45 @@ const RecipeGallery = () => {
     const navigation = useNavigation();
     const { mode, themeColors } = useContext(ThemeContext);
     const [recipes, setRecipes] = useState([]);
+    const [filteredRecipes, setFilteredRecipes] = useState([]);
     const [searchQuery, setSearchQuery] = useState({ tags: [], text: '', sortBy: 'none' });
     useEffect(() => {
         setRecipes(demoData)
     }, [])
-    console.log('rendering gallery');
-    // useEffect(() => {
-    //     // Filter and format recipes based on searchQuery
-    //     const filtered = recipes.filter(recipe => {
-    //         // Apply filtering logic here
-    //         // Check text filter (ignore if empty)
-    //         if (searchQuery.text && !recipe.title.toLowerCase().includes(searchQuery.text.toLowerCase())) {
-    //             return false;
-    //         }
+    useEffect(() => {
+        // Filter and format recipes based on searchQuery
+        const filtered = recipes.filter(recipe => {
+            // Apply filtering logic here
+            // Check text filter (ignore if empty)
+            if (searchQuery.text && !recipe.title.toLowerCase().includes(searchQuery.text.toLowerCase())) {
+                return false;
+            }
 
-    //         // Check tags filter (ignore if empty array)
-    //         if (searchQuery.tags.length > 0 && !searchQuery.tags.every(tag => recipe.tags.includes(tag))) {
-    //             return false;
-    //         }
+            // Check tags filter (ignore if empty array)
+            if (searchQuery.tags.length > 0 && !searchQuery.tags.every(tag => recipe.tags.includes(tag))) {
+                return false;
+            }
 
-    //         return true;
-    //     });
-    //     if (searchQuery.sortBy !== 'none') {
-    //         filtered.sort((a, b) => {
-    //             switch (searchQuery.sortBy) {
-    //                 case 'servings-asc':
-    //                     return a.servings - b.servings;
-    //                 case 'servings-desc':
-    //                     return b.servings - a.servings;
-    //                 case 'time-asc':
-    //                     return a.totalTime - b.totalTime;
-    //                 case 'time-desc':
-    //                     return b.totalTime - a.totalTime;
-    //                 default:
-    //                     return 0;
-    //             }
-    //         });
-    //     }
-    //     setRecipes(filtered);
-    // }, [recipes, searchQuery, setRecipes]);
+            return true;
+        });
+        if (searchQuery.sortBy !== 'none') {
+            filtered.sort((a, b) => {
+                switch (searchQuery.sortBy) {
+                    case 'servings-asc':
+                        return a.servings - b.servings;
+                    case 'servings-desc':
+                        return b.servings - a.servings;
+                    case 'time-asc':
+                        return a.totalTime - b.totalTime;
+                    case 'time-desc':
+                        return b.totalTime - a.totalTime;
+                    default:
+                        return 0;
+                }
+            });
+        }
+        setFilteredRecipes(filtered);
+    }, [recipes, searchQuery]);
     return (
         <View style={[{
             backgroundColor: themeColors[mode].background
@@ -59,8 +59,9 @@ const RecipeGallery = () => {
                 onPress={() =>
                     navigation.navigate('Recipe')
                 }
+
             />
-            <RecipeList recipeList={recipes} />
+            <RecipeList recipeList={filteredRecipes} />
         </View>
     )
 }

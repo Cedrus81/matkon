@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import React, { useContext } from 'react'
 import data from '../data.json';
 import { StyleSheet, Image } from 'react-native';
@@ -6,11 +6,14 @@ import { ThemeContext } from '../contexts/ThemeContext';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Accordion from '../cmps/Accordion';
 import { formatIngredients } from '../services/utils';
+import { useNavigation } from '@react-navigation/native';
 
 // Update your component's return statement:
 const RecipePage = () => {
     const recipe = data[0];
     const { mode, themeColors } = useContext(ThemeContext);
+    const navigation = useNavigation();
+
     return (
         <SafeAreaView style={[styles.mainContainer, { backgroundColor: themeColors[mode].background }]}>
             <ScrollView>
@@ -62,6 +65,12 @@ const RecipePage = () => {
                     )}
                 </View>
             </ScrollView>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Home')}
+                style={[styles.backButton, { backgroundColor: themeColors[mode].primary }]}
+            >
+                <Text style={[styles.backButtonText, { color: themeColors[mode].text }]}>Back</Text>
+            </TouchableOpacity>
         </SafeAreaView>
     );
 };
@@ -129,6 +138,25 @@ const styles = StyleSheet.create({
     },
     noComments: {
         fontStyle: 'italic',
+    },
+    backButton: {
+        position: 'absolute',
+        bottom: 90,
+        right: 10,
+        width: 60,
+        height: 60,
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 5,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
+    },
+    backButtonText: {
+        fontSize: 16,
+        fontWeight: 'bold',
     },
 });
 export default RecipePage

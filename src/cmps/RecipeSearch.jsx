@@ -96,16 +96,7 @@ const RecipeSearch = ({
                         {/* Tag Filter */}
 
                         <View style={[styles.inputGroup]}>
-                            {/* <Text style={[styles.label, { color: themeColors[mode].text }]}>
-                                Filter by Tag
-                            </Text>
-                            <View style={[
-                                ,
-                                {
-                                    borderColor: themeColors[mode].border,
-                                    backgroundColor: themeColors[mode].background,
-                                }
-                            ]}> */}
+
                             <CustomPicker
                                 selectedValue={selectedTag}
                                 onValueChange={handleTagFilter}
@@ -113,21 +104,11 @@ const RecipeSearch = ({
                                 label="Filter by Tag"
                                 itemStyle={{ color: themeColors[mode].text }}
                             />
-                            {/* </View> */}
                         </View>
 
                         {/* Sort Options */}
                         <View style={[styles.inputGroup]}>
-                            {/* <Text style={[styles.label, { color: themeColors[mode].text }]}>
-                                Sort By
-                            </Text> */}
-                            {/* <View style={[
-                                ,
-                                {
-                                    borderColor: themeColors[mode].border,
-                                    backgroundColor: themeColors[mode].background,
-                                }
-                            ]}> */}
+
                             <CustomPicker
                                 selectedValue={sortBy}
                                 onValueChange={handleSort}
@@ -135,7 +116,6 @@ const RecipeSearch = ({
                                 label="Sort By"
                                 itemStyle={{ color: themeColors[mode].text }}
                             />
-                            {/* </View> */}
                         </View>
                     </View>
 

@@ -64,7 +64,7 @@ const CustomPicker = ({
                             }
                             renderItem={({ item }) => {
                                 const value = typeof item === 'object' ? item.value : item;
-                                const label = typeof item === 'object' ? item.label : item;
+                                label = typeof item === 'object' ? item.label : item;
                                 return (
                                     <TouchableOpacity
                                         style={[styles.item, themedItem]}
